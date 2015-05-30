@@ -1,4 +1,4 @@
-# Revilist-GUI
+# ReviList-GUI
 
 > Author: Brian Tomlinson <darthlukan@gmail.com>
 
@@ -7,15 +7,15 @@
 
 ## Description
 
-> Revilist provides a new way for Document Controllers, LCI Coordinators, and Project Managers to manage documents on
-> projects, Revilist-GUI is the client-side application consuming the Revilist API that allows all of the magic to
+> ReviList provides a new way for Document Controllers, LCI Coordinators, and Project Managers to manage documents on
+> projects, Revilist-GUI is the client-side application consuming the ReviList API that allows all of the magic to
 > happen.  The concept is simple: Give Document Controllers and LCI Coordinators a tool that lets them track their
 > documents and projects without having to resort to expensive solutions that do nothing to assist them in their work
 > or worse, push them to using spreadsheets (Yuck!).
 
-> The founding concepts of Revilist come from the mind of @kstavenes, a Document Lead in the Norwegian Oil&Gas industry
-> who has for years been plagued by the failures of supposed "Docuement Control Software" that failed to let her to
-> perform the primary task: Track documents. It is her expertise and knowledge of the industry that is behind Revilist
+> The founding concepts of Revilist come from the mind of [@kstavenes](https://github.com/kstavenes), a Document Lead in the Norwegian Oil&Gas industry
+> who has for years been plagued by the failures of supposed "Document Control Software" that failed to let her to
+> perform the primary task: Track documents. It is her expertise and knowledge of the industry that is behind ReviList
 > and all credit for the ideas behind the application belong to her.
 
 
