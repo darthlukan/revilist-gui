@@ -9,27 +9,24 @@
  */
 angular.module('revilistApp')
   .controller('MainCtrl', function ($scope) {
-    this.documents = [
-      {
-        title: 'A title',
-        revision: 1,
-        status: '02',
-        edit: false
-      },
-      {
-        title: 'Another title',
-        revision: 3,
-        status: '01',
-        edit: false
-      },
-      {
-        title: 'Yet another title',
-        revision: 1,
-        status: '05',
-        edit: false
-      }
-    ];
-
+    this.documents = [];
+    this.projects = [];
+    this.populate = function() {
+      for (var i = 1; i <= 25; i++) {
+        this.documents.push({
+          title: 'Title ' + i,
+          revision: i,
+          status: i < 10 ? '0' + i: i,
+          edit: false
+        });
+        if (i < 6) {
+          this.projects.push({
+            name: 'Project Name ' + i
+          });
+        };
+      };
+    };
+    this.populate();
     this.awesomeThings = {
       'html': 'HTML5 Boilerplate',
       'angular': 'AngularJS',
