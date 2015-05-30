@@ -19,7 +19,7 @@ angular.module('revilistApp')
           status: i < 10 ? '0' + i: i,
           edit: false
         });
-        if (i < 6) {
+        if (i < 7) {
           this.projects.push({
             name: 'Project Name ' + i
           });
