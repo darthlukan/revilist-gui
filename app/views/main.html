@@ -44,14 +44,26 @@
     <div class="span9 marketing" ng-show="main.isSelected(2)">
       <table class="table table-bordered table-hover table-responsive">
         <tr>
+          <th>Edit</th>
           <th>Title</th>
           <th>Revision</th>
           <th>Status Code</th>
         </tr>
         <tr ng-repeat="doc in main.documents">
-          <td>{{ doc.title }}</td>
-          <td>{{ doc.revision }}</td>
-          <td>{{ doc.status }}</td>
+          <td><input type="checkbox" ng-model="doc.edit" /></td>
+          <td>
+            <input ng-show="doc.edit" ng-model="doc.title" placeholder="{{ doc.title }}"
+              type="text">{{ doc.title }}</input>
+            </td>
+          <td>
+            <input ng-show="doc.edit" ng-model="doc.revision" placeholder="{{ doc.revision }}"
+              type="number">{{ doc.revision }}</input>
+          </td>
+          <td>
+            <input ng-show="doc.edit" ng-model="doc.status" placeholder="{{ doc.status }}"
+              type="text">{{ doc.status }}</input>
+            </td>
+          <td ng-show="doc.edit"><input ng-click="doc.edit = false" type="button" class="btn btn-info" value="Save"/></td>
         </tr>
       </table>
     </div>
