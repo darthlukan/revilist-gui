@@ -11,7 +11,7 @@
 <div class="container-fluid" ng-controller="MainCtrl as main">
   <div class="row col-md-3">
     <div class="span3">
-      <ul class="nav nav-list">
+      <ul class="nav nav-list pull-left">
         <li class="nav-header h4">Contexts</li>
         <li>
           <a class="btn btn-default" role="button"
@@ -28,14 +28,14 @@
   <div class="row col-md-9">
     <div class="span8 marketing" ng-show="main.isSelected(1)">
       <div class="row col-md-6" ng-repeat="project in main.projects">
-        <span class="span6">
-          <button class="btn btn-success">{{ project.name }}</button>
+        <span class="pull-right">
+          <button class="btn btn-success btn-lg">{{ project.name }}</button>
         </span>
       </div>
     </div>
 
     <div class="span9 marketing" ng-show="main.isSelected(2)">
-      <table class="table table-bordered table-hover table-responsive">
+      <table class="table table-bordered table-hover table-condensed table-responsive">
         <tr>
           <th>Edit</th>
           <th>Title</th>
