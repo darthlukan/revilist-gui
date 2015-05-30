@@ -1,3 +1,4 @@
+<!--
 <div class="jumbotron">
   <h1>'Allo, 'Allo!</h1>
   <p class="lead">
@@ -6,32 +7,54 @@
   </p>
   <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
-
-<div class="container-fluid">
-  <div class="row col-md-4">
-    <div class="span2">
+-->
+<div class="container-fluid" ng-controller="MainCtrl as main">
+  <div class="row col-md-3">
+    <div class="span3">
       <ul class="nav nav-list">
         <li class="nav-header">Contexts</li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#documents">Documents</a></li>
+        <li>
+          <a class="btn btn-default" role="button"
+            ng-class="{active: main.isSelected(1)}" ng-click="main.selected = 1">Projects</a>
+        </li>
+        <li>
+          <a class="btn btn-default" role="button"
+            ng-class="{active: main.isSelected(2)}" ng-click="main.selected = 2">Documents</a>
+        </li>
       </ul>
     </div>
   </div>
 
-  <div class="row col-md-8">
-    <div class="span8 marketing">
-      <h4>HTML5 Boilerplate</h4>
+  <div class="row col-md-9">
+    <div class="span8 marketing" ng-show="main.isSelected(1)">
+      <h4>{{ main.awesomeThings.html }}</h4>
       <p>
         HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
       </p>
 
-      <h4>Angular</h4>
+      <h4>{{ main.awesomeThings.angular }}</h4>
       <p>
         AngularJS is a toolset for building the framework most suited to your application development.
       </p>
 
-      <h4>Karma</h4>
+      <h4>{{ main.awesomeThings.karma }}</h4>
       <p>Spectacular Test Runner for JavaScript.</p>
     </div>
+
+    <div class="span9 marketing" ng-show="main.isSelected(2)">
+      <table class="table table-bordered table-hover table-responsive">
+        <tr>
+          <th>Title</th>
+          <th>Revision</th>
+          <th>Status Code</th>
+        </tr>
+        <tr ng-repeat="doc in main.documents">
+          <td>{{ doc.title }}</td>
+          <td>{{ doc.revision }}</td>
+          <td>{{ doc.status }}</td>
+        </tr>
+      </table>
+    </div>
+
   </div>
 </div>

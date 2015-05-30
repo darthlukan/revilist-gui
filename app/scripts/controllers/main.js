@@ -9,9 +9,25 @@
  */
 angular.module('revilistApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    this.documents = [
+      {
+        title: 'A title',
+        revision: 1,
+        status: '02'
+      },
+      {
+        title: 'Another title',
+        revision: 3,
+        status: '01'
+      }
     ];
+    this.awesomeThings = {
+      'html': 'HTML5 Boilerplate',
+      'angular': 'AngularJS',
+      'karma': 'Karma'
+    };
+    this.selected = 1;
+    this.isSelected = function(value) {
+      return this.selected === value;
+    };
   });
