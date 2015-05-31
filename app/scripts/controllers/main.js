@@ -8,9 +8,11 @@
  * Controller of the revilistApp
  */
 angular.module('revilistApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function () {
+    this.selected = 1;
     this.documents = [];
     this.projects = [];
+
     this.populate = function() {
       for (var i = 1; i <= 10; i++) {
         this.documents.push({
@@ -25,20 +27,12 @@ angular.module('revilistApp')
           this.projects.push({
             name: 'Project Name ' + i
           });
-        };
-      };
+        }
+      }
     };
     this.populate();
-    this.awesomeThings = {
-      'html': 'HTML5 Boilerplate',
-      'angular': 'AngularJS',
-      'karma': 'Karma'
-    };
-
-    this.selected = 1;
 
     this.isSelected = function(value) {
       return this.selected === value;
     };
-
   });
